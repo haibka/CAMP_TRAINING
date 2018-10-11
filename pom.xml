@@ -6,7 +6,7 @@
 	<groupId>jp.co.netprotections</groupId>
 	<artifactId>BootCampStartup</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>BootCampStartup</name>
 	<description>Demo project for Spring Boot</description>
@@ -53,6 +53,11 @@
 		    <groupId>org.junit.jupiter</groupId>
 		    <artifactId>junit-jupiter-engine</artifactId>
 		    <version>5.2.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-tomcat</artifactId>
+		    <scope>provided</scope>
 		</dependency>
 	</dependencies>
 

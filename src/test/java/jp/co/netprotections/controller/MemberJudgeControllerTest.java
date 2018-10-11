@@ -48,7 +48,6 @@ public class MemberJudgeControllerTest {
             "  \"programmingKnowledge\": \"3\",\n" +
             "  \"infrastructureKnowledge\": \"3\"\n" +
             "} ]\n" + "}" ;
-    	System.out.println(json);
     	mockMvc.perform(post("/api/main")
     		.contentType(MediaType.APPLICATION_JSON)
             .content(json))
