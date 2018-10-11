@@ -2,14 +2,14 @@ package jp.co.netprotections.dto;
 
 import junit.framework.TestCase;
 
-public class ResponseDtoTest extends TestCase {
+public class MemberJudgeResponseDtoTest extends TestCase {
 	public void testGetMemberName() {
-		ResponseDto resDto = new ResponseDto();
+		MemberJudgeResponseDto resDto = new MemberJudgeResponseDto();
 		resDto.setMemberName("yamada");
 		assertEquals("yamada",resDto.getMemberName());
 	}
 	public void testGetEnlistedPropriety() {
-		ResponseDto resDto = new ResponseDto();
+		MemberJudgeResponseDto resDto = new MemberJudgeResponseDto();
 		resDto.setEnlistedPropriety(true);
 		assertEquals(true,resDto.isEnlistedPropriety());
 	}

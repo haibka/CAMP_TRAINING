@@ -1,11 +1,6 @@
 package jp.co.netprotections.dto;
 
-/**
- * Controllerのレスポンスクラスです.
- * @author s.nozaki
- *
- */
-public class ResponseDto {
+public class MemberJudgeResponseDto {
 	//レスポンスの属性
 	
 	private String memberName;

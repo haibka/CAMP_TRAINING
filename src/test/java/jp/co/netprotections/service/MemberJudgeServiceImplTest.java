@@ -10,13 +10,13 @@ import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import jp.co.netprotections.dto.RequestDto;
+import jp.co.netprotections.dto.MemberJudgeRequestDto;
 
 @RunWith(JUnit4.class)
 @ExtendWith(MockitoExtension.class)
 public class MemberJudgeServiceImplTest {
 	
-	RequestDto requestDto = Mockito.mock(RequestDto.class);
+	MemberJudgeRequestDto requestDto = Mockito.mock(MemberJudgeRequestDto.class);
 	MemberJudgeService memberJudgeService = new MemberJudgeServiceImpl();
 	
 	@Before
