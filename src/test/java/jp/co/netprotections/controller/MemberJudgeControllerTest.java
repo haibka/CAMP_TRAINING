@@ -20,14 +20,14 @@ import jp.co.netprotections.service.MemberJudgeService;
 
 @RunWith(JUnit4.class)
 @SpringBootTest(classes = BootCampStartupApplication.class)
-public class MainControllerTest {
+public class MemberJudgeControllerTest {
 	private MockMvc mockMvc;
 
     @Mock
     private MemberJudgeService memberJudgeService;
 
     @InjectMocks
-    private MainController mainController;
+    private MemberJudgeController mainController;
 
     @Before
     public void init(){

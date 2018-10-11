@@ -1,11 +1,6 @@
 package jp.co.netprotections.dto;
 
-/**
- * リクエストされたJSONをマッピングするDTOです.
- * @author s.nozaki
- *
- */
-public class RequestDto {
+public class MemberJudgeRequestDto {
 	//リクエストの属性
 	private String memberName;
 	private int eventPlanning;
