@@ -38,7 +38,7 @@ public class MemberJudgeControllerTest {
     }
     
     @Test
-    public void testMainController() throws Exception {
+    public void mainControllerTest() throws Exception {
     	String json = "{\n" +
     		"\"memberCandidatesList\" : [" + "\n{" +
             "  \"memberName\": \"snozaki\",\n" +
@@ -53,5 +53,42 @@ public class MemberJudgeControllerTest {
             .content(json))
             .andExpect(status().isOk())
             .andReturn();
+    }
+    
+    @Test
+    //　条件に違反した時、空のレスポンスを返却する
+    public void mainControllerConditionTest() throws Exception {
+    	String json = "{\n" +
+    		"\"memberCandidatesList\" : [" + "\n{" +
+            "  \"memberName\": \"yamada\",\n" +
+            "  \"eventPlanning\": \"8\",\n" +
+            "  \"cogitation\": \"8\",\n" +
+            "  \"coodination\": \"8\",\n" +
+            "  \"programmingKnowledge\": \"8\",\n" +
+            "  \"infrastructureKnowledge\": \"8\"\n" +
+            "} ]\n" + "}" ;
+    	mockMvc.perform(post("/api/main")
+    		.contentType(MediaType.APPLICATION_JSON)
+            .content(json))
+            .andExpect(status().isOk())
+            .andDo(mvcResult -> {  // レスポンスの内容
+            });
+    }
+    
+    @Test
+    public void mainControllerTypeTest() throws Exception {
+    	String json = "{\n" +
+    		"\"memberCandidatesList\" : [" + "\n{" +
+            "  \"memberName\": \"yamada\",\n" +
+            "  \"eventPlanning\": \"dsd\",\n" + //価値のタイプはStringので間違い
+            "  \"cogitation\": \"\",\n" +
+            "  \"coodination\": \"8\",\n" +
+            "  \"programmingKnowledge\": \"8\",\n" +
+            "  \"infrastructureKnowledge\": \"8\"\n" +
+            "} ]\n" + "}" ;
+    	mockMvc.perform(post("/api/main")
+    		.contentType(MediaType.APPLICATION_JSON)
+            .content(json))
+            .andExpect(status().isBadRequest());
     }
 }
