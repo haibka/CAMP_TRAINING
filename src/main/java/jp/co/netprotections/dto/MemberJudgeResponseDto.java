@@ -1,25 +1,12 @@
 package jp.co.netprotections.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class MemberJudgeResponseDto {
-	//レスポンスの属性
-	
+	//レスポンスの属性	
 	private String memberName;
-	private boolean enlistedPropriety;
-
-	public String getMemberName() {
-		return memberName;
-	}
-
-	public void setMemberName(String memberName) {
-		this.memberName = memberName;
-	}
-
-	public boolean isEnlistedPropriety() {
-		return enlistedPropriety;
-	}
-
-	public void setEnlistedPropriety(boolean enlistedPropriety) {
-		this.enlistedPropriety = enlistedPropriety;
-	}
-
+	private boolean isEnlistedPropriety;
 }
