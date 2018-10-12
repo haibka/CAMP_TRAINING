@@ -18,12 +18,12 @@ public class MemberJudgeServiceImpl implements MemberJudgeService{
 	public boolean isValid(MemberJudgeRequestDto dto){
 		boolean result = true;
 		int totalPoint = dto.getCogitation() + dto.getEventPlanning() 
-			+ dto.getCoodination() + dto.getProgrammingKnowledge() + dto.getInfrastructureKnowledge(); //合計点
+			+ dto.getCoodination() + dto.getProgrammingAbility() + dto.getInfrastructureKnowledge(); //合計点
 		if(dto.getEventPlanning() < 1 || dto.getCoodination() < 1 || totalPoint < 10) {
 			result = false;
 		} else {
 			if (dto.getCogitation() == 0 && dto.getEventPlanning() != 0 
-				&& dto.getCoodination() == 0 && dto.getProgrammingKnowledge() == 0 && dto.getInfrastructureKnowledge() == 0) {
+				&& dto.getCoodination() == 0 && dto.getProgrammingAbility() == 0 && dto.getInfrastructureKnowledge() == 0) {
 				result = false; //イベント企画力以外が全て0点である
 			}
 			else {
@@ -38,11 +38,11 @@ public class MemberJudgeServiceImpl implements MemberJudgeService{
 	public boolean checkLimit(MemberJudgeRequestDto dto) {
 		System.out.println("Coodddasdasd" + dto.getCogitation());
 		if (dto.getCogitation() > 5 || dto.getCoodination() > 5 || dto.getEventPlanning() > 5 
-			|| dto.getInfrastructureKnowledge() > 5 || dto.getProgrammingKnowledge() > 5) {
+			|| dto.getInfrastructureKnowledge() > 5 || dto.getProgrammingAbility() > 5) {
 			return false;
 		} else {
 			if (dto.getCogitation() < 1 || dto.getCoodination() < 1 || dto.getEventPlanning() < 1 
-				|| dto.getInfrastructureKnowledge() < 1 || dto.getProgrammingKnowledge() < 1)
+				|| dto.getInfrastructureKnowledge() < 1 || dto.getProgrammingAbility() < 1)
 				return false;
 		}
 		return true;

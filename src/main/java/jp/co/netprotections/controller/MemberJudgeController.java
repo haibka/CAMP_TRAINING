@@ -1,5 +1,7 @@
 package jp.co.netprotections.controller;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,5 +23,17 @@ public class MemberJudgeController {
 	public MemberJudgeResponseDtoArr execute(@RequestBody MemberJudgeRequestDtoArr dtoArr) {
 		return memberJudgeService.createResponse(dtoArr);
 	}
+	
+	@RequestMapping("/")
+    public String home(Map<String, Object> model) {
+        model.put("message", "HowToDoInJava Reader !!");
+        return "index";
+    }
+     
+    @RequestMapping("/next")
+    public String next(Map<String, Object> model) {
+        model.put("message", "You are in new page !!");
+        return "next";
+    }
 
 }

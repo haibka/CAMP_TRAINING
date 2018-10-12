@@ -6,7 +6,7 @@ public class MemberJudgeRequestDto {
 	private int eventPlanning;
 	private int cogitation;
 	private int coodination;
-	private int programmingKnowledge;
+	private int programmingAbility;
 	private int infrastructureKnowledge;
 	
 	public String getMemberName() {
@@ -41,19 +41,19 @@ public class MemberJudgeRequestDto {
 		this.coodination = coodination;
 	}
 
-	public int getProgrammingKnowledge() {
-		return programmingKnowledge;
-	}
-
-	public void setProgrammingKnowledge(int programmingKnowledge) {
-		this.programmingKnowledge = programmingKnowledge;
-	}
-
 	public int getInfrastructureKnowledge() {
 		return infrastructureKnowledge;
 	}
 
 	public void setInfrastructureKnowledge(int nfrastructureKnowledge) {
 		this.infrastructureKnowledge = nfrastructureKnowledge;
+	}
+
+	public int getProgrammingAbility() {
+		return programmingAbility;
+	}
+
+	public void setProgrammingAbility(int programmingAbility) {
+		this.programmingAbility = programmingAbility;
 	}
 }

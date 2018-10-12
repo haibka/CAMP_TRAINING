@@ -23,8 +23,8 @@ public class MemberJudgeRequestDtoTest extends TestCase {
 	
 	public void testGetProgrammingKnowledge() {
 		MemberJudgeRequestDto resDto = new MemberJudgeRequestDto();
-		resDto.setProgrammingKnowledge(1);
-		assertEquals(1,resDto.getProgrammingKnowledge());
+		resDto.setProgrammingAbility(1);
+		assertEquals(1,resDto.getProgrammingAbility());
 	}
 	
 	public void testGetInfrastructureKnowledge() {

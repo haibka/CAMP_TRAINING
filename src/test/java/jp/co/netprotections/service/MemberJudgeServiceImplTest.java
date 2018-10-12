@@ -28,21 +28,21 @@ public class MemberJudgeServiceImplTest {
 		when(requestDto.getCoodination()).thenReturn(2);
 		when(requestDto.getEventPlanning()).thenReturn(4);
 		when(requestDto.getInfrastructureKnowledge()).thenReturn(3);
-		when(requestDto.getProgrammingKnowledge()).thenReturn(3);	
+		when(requestDto.getProgrammingAbility()).thenReturn(3);	
 		
 		when(requestDto_2.getMemberName()).thenReturn("member_2");
 		when(requestDto_2.getCogitation()).thenReturn(2);
 		when(requestDto_2.getCoodination()).thenReturn(2);
 		when(requestDto_2.getEventPlanning()).thenReturn(9);
 		when(requestDto_2.getInfrastructureKnowledge()).thenReturn(3);
-		when(requestDto_2.getProgrammingKnowledge()).thenReturn(3);	
+		when(requestDto_2.getProgrammingAbility()).thenReturn(3);	
 		
 		when(requestDto_3.getMemberName()).thenReturn("member_3");
 		when(requestDto_3.getCogitation()).thenReturn(2);
 		when(requestDto_3.getCoodination()).thenReturn(1);
 		when(requestDto_3.getEventPlanning()).thenReturn(1);
 		when(requestDto_3.getInfrastructureKnowledge()).thenReturn(1);
-		when(requestDto_3.getProgrammingKnowledge()).thenReturn(1);	
+		when(requestDto_3.getProgrammingAbility()).thenReturn(1);	
 	}
 	
 	@Test
